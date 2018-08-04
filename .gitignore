@@ -1,0 +1,12 @@
+*.prof
+.stack-work/
+dist*
+.ghc*
+*.hi
+*.
+.DS_Store
+*~
+\#*
+.#*
+.swp
+TAGS
