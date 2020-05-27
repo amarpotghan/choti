@@ -92,7 +92,7 @@ data TypeError
   | NoConform CheckableTerm Type
 
 checkType :: Index -> Context -> CheckableTerm -> Type -> Either TypeError ()
-checkType i c (Lambda f) (PiValue dom codfun) =
+checkType i c (Lambda f) (PiValue dom codfun) = do
   -- add variable to the context
   checkType (i + 1) ((Bounded i, dom):c)
   -- substitute on f and result of Pi's codfun
